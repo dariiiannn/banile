@@ -69,10 +69,17 @@ export default class Layout extends React.Component {
             </li>
         ) );
         return (
-            <div>
-                <h1>{balance}</h1>
-                <ul>{listItems}</ul>
-                <div>
+            <div className="main-container">
+                <div className="balance dark-text card">
+                    <h1>{balance}</h1>
+                </div>
+                <div className="action-card card">
+                    <span>add</span>
+                </div>
+                <div className="transactions">
+                    <ul>{listItems}</ul>
+                </div>
+                {/* <div>
                     <input
                         type="number"
                         value={ this.state.newTransationValue }
@@ -82,13 +89,13 @@ export default class Layout extends React.Component {
                         value={ this.state.newTransactionType }
                         onChange={ this.typeChanged }
                     >
-                        <option value="in" selected>
+                        <option value="in">
               in
                         </option>
                         <option value="out">out</option>
                     </select>
                     <button onClick={ this.onAddTransaction }>Muie steaua</button>
-                </div>
+                </div> */}
             </div>
         );
     }
